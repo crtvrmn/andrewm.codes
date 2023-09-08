@@ -57,7 +57,7 @@ TABLE WITHOUT ID
   choice(mindfulness > 10, "✅", "❌") as Mindfulness,
   reading as Reading
 FROM "daily"
-WHERE file.day <= date(now) AND file.day >= date(now) - dur(7days)
+WHERE file.cday <= date(now) AND file.cday >= date(now) - dur(7days)
 SORT file.day ASC
 ```
 
